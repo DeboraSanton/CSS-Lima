@@ -1,0 +1,358 @@
+*{
+    /* Impede que o padding engorde as "caixas" */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #061326;
+    color: #ffffff;
+    line-height: 1.5;
+    padding-bottom: 60px ;
+}
+.container-pagina {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+
+
+/* Componente 1 - Cabeçalho */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0b2240;
+    padding: 16px 24px;
+    border-radius: 10px;
+    border: 1px solid #1e4976;
+}
+
+
+
+
+.logo{
+    font-size: 22px;
+    font-weight: bold;
+    color: #00d2ff;
+}
+
+
+
+
+.menu-links a{
+    text-decoration: none;
+    color: #e0f2fe;
+    margin-left: 20px;
+    font-weight: 600;
+}
+.menu-links a:hover{
+    color: #00d2ff;
+}
+
+
+
+
+/* Componente 2 - Banner principal (Hero) */
+
+
+
+
+/* Animação do icone da baleia */
+@keyframes flutuar {
+    0% {transform: translateY(0px);}
+    50% {transform: translateY(-14px);}
+    100% {transform: translateY(0px);}
+}
+
+
+
+
+@keyframes nadar-horizontal{
+     0% {transform: translateX(40vh);} /* começar à direita*/
+    100% {transform: translateX(-350px);}/* vai até o lado esquerdo */
+}
+
+
+
+
+.icone-svg{
+    animation: nadar-horizontal 8s linear infinite;
+}
+
+
+
+
+.hero-banner{
+    text-align: center;
+    background: linear-gradient(180deg, #0b2240 0%, #081b33 100%);
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin-top: 25px;
+    border: 1px solid #1e4976;
+}
+
+
+
+
+.orca-icone{
+    display: inline-block;
+    margin-bottom: 10px;
+    animation: flutuar 3s ease-in-out infinite;
+    
+}
+
+
+
+
+.hero-banner h1{
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+
+
+
+.hero-banner p{
+    color: #bae6fd;
+    max-width: 600px;
+    margin: 0 auto 24px auto;
+    font-size: 17px;
+}
+
+
+
+
+.btn-mergulhar{
+    background-color: #00d2ff;
+    color: #061326;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+
+
+.btn-mergulhar:hover{
+    background-color: #ffffff;
+    transform: scale(1.1);
+}
+
+
+
+
+/* componente 3 - box model */
+.caixa-sonar{
+    background-color: #0b2240;
+    padding: 20px;
+    border: 4px dotted #00d2ff;
+    margin: 20px 0px;
+    border-radius: 10px;
+}
+
+
+
+
+.caixa-sonar h2{
+    color: #00d2ff;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+/*componente 4 - propriedade display  */
+
+
+
+
+.secao-habitos{
+    background-color: #0b2240;
+    padding: 24px;
+    border-radius: 10px;
+    border: 1px solid #1e4976;
+    margin-top: 25px;
+}
+
+
+
+
+.etiqueta-orca{
+    display: inline-block;
+    background-color: #061326;
+    color: #00d2ff;
+    padding: 10px 20px;
+    margin: 10px 10px 0 0;
+    border: 2px solid #00d2ff;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+
+
+
+.exemplo-block-folgado{
+    display: block;
+    background-color: #1e4976;
+    color: #bae6fd;
+    padding: 10px 15px;
+    margin-top: 15px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+
+
+
+/* componente 5 - grade de cards */
+
+
+
+
+
+
+
+
+.grade-alcateia{
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+
+
+
+.card-orca{
+    flex: 1;
+    min-width: 240px;
+    background-color: #0b2240;
+    padding: 22px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
+}
+
+
+
+
+.card-orca h3{
+    color: #00d2ff;
+    margin-bottom: 10px;
+    font: 20px;
+}
+
+
+
+
+.card-orca p{
+    color: #e0f2fe;
+    font-size: 15px;
+}
+
+
+/* estilo dos elemntos da explicaçao */
+
+
+.barra-fixa{
+    position: sticky;
+    top:0;
+    z-index: 100;
+    background-color: #030b17;
+    border-bottom: 2px solid #00d2ff;
+    padding: 12px 20px;
+    display: felx;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap:wrap ;
+    gap: 10px;
+}
+
+
+.btn-alternar-explicacoes{
+background-color: #facc15;
+color: black;
+border: none;
+border-radius: 10px;
+font-weight: bold;
+font-size: 14px;
+cursor: pointer;
+}
+
+
+.btn-alternar-explicacoes:hover{
+    background-color: #facc15;
+}
+.explicacao-css{
+    background-color: #132f4c;
+    border-left: 6px solid #facc15;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+body .esconder-explicacoes .explicacao-css{
+    display: none;
+
+
+}
+
+
+.tag-componente{
+    display: inline-block;
+    background-color: #facc15;
+    color: black;
+    font-weight: bold ;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+
+.explicacao-css h4{
+    color: #fde047;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+
+.explicacao-css p{
+    color: #e2e8fe;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+
+.bloco-codigo{
+    background-color: #040d1a;
+    color: #38bdf8;
+    padding: 10px 15px ;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace ;
+    font-size: 14px;
+    overflow-x: auto;
+    white-space: pre;
+    margin-top: 10px;
+}

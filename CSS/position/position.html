@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        /* Aumenando a altura da pagina, em relação a viewport
+         */
+        body{
+            height: 100vh;
+        }
+
+        .container{
+            margin-top: 20vh;
+            /* Posiions testados:
+            position: fixed
+            position: relative
+            position:stactic
+            position: absolute
+            position: stycky */
+            position: relative;
+            left: 200px;
+           
+
+            top: 150;
+            background-color: cadetblue;
+            width: 400px;
+            height: 400px;
+        }
+        
+        .box{
+            top: 30px;
+            left: 30px;
+            position: fixed;
+            width: 200px;
+            height: 200px;
+            background-color: burlywood;
+        }
+
+        img{
+            height: 150px;
+            width: 150px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- div pai e div filha -->
+    <div class="container">
+        <div class="box">
+            <img src="https://img.magnific.com/fotos-gratis/close-up-de-uma-arara-escarlate-de-vista-lateral-close-up-da-cabeca-da-arara-scarlate_488145-3540.jpg?semt=ais_hybrid&w=740&q=80" alt="">
+        </div>
+    </div>
+</body>
+</html>

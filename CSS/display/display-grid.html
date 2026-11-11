@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Grid</title>
+    <style>
+        /* CSS GRID (unidade "fr" = frção) */
+        .vitrine-livros{
+            background-color: azure;
+            /* ria 3 colunas de larguras identicas */
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+        }
+        .card-produto{
+            background-color: antiquewhite;
+            /* Essa opçaõ srve como um delimitador para o selo span "-50% OFF" */
+            position: relative;
+            padding: 20px;
+            border: 1px solid;
+        }
+        .selo-oferta{
+            /* Serve para o span selo oferta flutuar livrimente dentro da div */
+            position: absolute;
+            background-color: bisque;
+            top: -10px;
+            right: 12px;
+            padding: 4px, 10px;
+        }
+    </style>
+</head>
+<body>
+    <section class="vitrine-livros">
+        <div  class="card-produto">A República - Platão</div>
+        <div  class="card-produto">O Banquete - Platão</div>
+        <div  class="card-produto">A Ética a Nicomaco - Aristóteles</div>
+        <div  class="card-produto">Segunda Via - São Tomás de Aquino</div>
+        <div  class="card-produto">Suma Teológica - São Tomás de Aquino</div>
+        <div  class="card-produto">
+        <span class="selo-oferta">
+            50% OFF
+        </span>
+        Da Alma - Aristóteles
+    </div>
+    </section>
+</body>
+</html>
